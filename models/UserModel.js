@@ -27,7 +27,7 @@ const UserSchema = new Schema({
   },
   userImage: {
     type: String,
-    required: fasle
+    required: false
   },
   date: {
     type: Date,
@@ -37,4 +37,4 @@ const UserSchema = new Schema({
 
 const UserModel = mongoose.model("user", UserSchema);
 
-module.exports = { UserModel };
+module.exports = UserModel;

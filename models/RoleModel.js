@@ -16,30 +16,7 @@ const RoleSchema = new Schema({
     default: Date.now
   }
 });
-const GroupSchema = new Schema({
-  groupName: {
-    type: String,
-    unique: true,
-    required: true
-  },
-  groupMembers: {
-    type: Array,
-    required: true
-  },
-  groupAdmin: {
-    type: Array,
-    required: true
-  },
-  groupDesc: {
-    type: String,
-    required: true
-  },
-  groupImage: {
-    type: String,
-    required: false
-  }
-});
 
 const RoleModel = mongoose.model("role", RoleSchema);
 
-module.exports = { RoleModel };
+module.exports = RoleModel;

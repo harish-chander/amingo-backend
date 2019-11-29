@@ -10,3 +10,4 @@
 
 - Schemas Done
 - User CURD Done
+- Roles CURD Done

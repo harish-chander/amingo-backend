@@ -7,6 +7,7 @@ const logger = require("morgan");
 // const passport = require("passport");
 const usersRouter = require("./routes/users");
 const rolesRouter = require("./routes/roles");
+const feedRouter = require("./routes/feeds");
 // const mongoose = require("mongoose");
 require("./db");
 const app = express();
@@ -20,5 +21,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/users", usersRouter);
 app.use("/roles", rolesRouter);
+app.use("/feeds", feedRouter);
 
 module.exports = app;

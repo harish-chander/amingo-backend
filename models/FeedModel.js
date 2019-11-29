@@ -37,4 +37,4 @@ const FeedSchema = new Schema({
 
 const FeedModel = mongoose.model("feed", FeedSchema);
 
-module.exports = { FeedModel };
+module.exports = FeedModel;

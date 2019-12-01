@@ -47,7 +47,7 @@ router.post("/register", (req, res, next) => {
 
 router.delete("/delete", (req, res, next) => {
   const delUser = req.body.id;
-  UserModel.findOneAndDelete(delUser)
+  UserModel.findByIdAndDelete(delUser)
     .then(returnData => {
       res.json(returnData);
     })

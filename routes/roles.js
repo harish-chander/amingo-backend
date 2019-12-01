@@ -45,7 +45,7 @@ router.post("/add", (req, res, next) => {
 router.delete("/delete", (req, res, next) => {
   const roleId = req.body.id;
 
-  RoleModel.findOneAndDelete(roleId)
+  RoleModel.findByIdAndDelete(roleId)
     .then(delResult => {
       res.json(delResult);
     })

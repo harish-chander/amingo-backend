@@ -40,7 +40,8 @@ router.post("/add", (req, res, next) => {
 });
 
 router.delete("/delete", (req, res, next) => {
-  const delGrp = req.body.GroupModel.findOneAndDelete(delGrp)
+  const delGrp = req.body.id;
+  GroupModel.findByIdAndDelete(delGrp)
     .then(delGrpResult => {
       res.json(delGrpResult);
     })

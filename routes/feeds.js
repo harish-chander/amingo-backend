@@ -50,7 +50,7 @@ router.post("/add", (req, res, next) => {
 
 router.delete("/delete", (req, res, next) => {
   const feedID = req.body.id;
-  FeedModel.findOneAndDelete(feedID)
+  FeedModel.findByIdAndDelete(feedID)
     .then(delResult => {
       res.json(delResult);
     })

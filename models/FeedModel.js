@@ -29,6 +29,10 @@ const FeedSchema = new Schema({
     type: Array,
     default: []
   },
+  edited: {
+    type: String,
+    required: false
+  },
   date: {
     type: Date,
     default: Date.now

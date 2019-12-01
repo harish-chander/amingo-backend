@@ -23,6 +23,10 @@ const GroupSchema = new Schema({
   groupImage: {
     type: String,
     required: false
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 
